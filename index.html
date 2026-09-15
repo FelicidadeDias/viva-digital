@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIVA DIGITAL | Aprenda. Encontre. Cresça.</title>
+
+<meta name="description" content="VIVA DIGITAL — informação prática sobre dinheiro, trabalho online, inteligência artificial, tecnologia, emprego, aprendizagem e negócios digitais para quem fala português.">
+
+<meta name="keywords" content="trabalho online, renda extra, inteligência artificial, tecnologia, emprego, CV, negócios digitais, ganhar dinheiro online, ferramentas digitais">
+
+<meta name="author" content="VIVA DIGITAL">
+
+<meta name="theme-color" content="#071a33">
+
+<style>
+
+/* =====================================================
+   VIVA DIGITAL
+   ESTILO PRINCIPAL
+===================================================== */
+
+:root{
+    --dark:#071a33;
+    --dark2:#0d294d;
+    --blue:#1479d1;
+    --blue2:#36a3ff;
+    --gold:#f4b942;
+    --white:#ffffff;
+    --light:#f4f7fb;
+    --text:#172235;
+    --muted:#657286;
+    --border:#e4eaf2;
+    --shadow:0 12px 35px rgba(7,26,51,.12);
+    --radius:22px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* =====================================================
+   TOPO
+===================================================== */
+
+header{
+    background:rgba(7,26,51,.97);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.navbar{
+    min-height:74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:-1px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.logo small{
+    display:block;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#b8c9dd;
+    margin-top:-4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:14px;
+    color:#e9f2fb;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    color:white;
+    background:
+    linear-gradient(90deg,rgba(3,18,38,.96),rgba(7,26,51,.78),rgba(7,26,51,.38)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:760px;
+    padding:90px 0;
+}
+
+.tag{
+    display:inline-block;
+    background:rgba(244,185,66,.14);
+    border:1px solid rgba(244,185,66,.45);
+    color:#ffd56d;
+    padding:8px 15px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,76px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:650px;
+    color:#dce8f5;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#15243a;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.45);
+    color:white;
+    background:rgba(255,255,255,.08);
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--dark);
+}
+
+/* =====================================================
+   DESTAQUES
+===================================================== */
+
+.highlights{
+    margin-top:-55px;
+    position:relative;
+    z-index:10;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.highlight{
+    background:white;
+    padding:25px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.highlight-icon{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    background:#eaf5ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    margin-bottom:14px;
+}
+
+.highlight h3{
+    margin-bottom:6px;
+}
+
+.highlight p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+section{
+    padding:85px 0;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 42px;
+}
+
+.section-heading .mini{
+    color:var(--blue);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.section-heading h2{
+    font-size:38px;
+    line-height:1.15;
+    margin:8px 0 12px;
+}
+
+.section-heading p{
+    color:var(--muted);
+}
+
+/* =====================================================
+   ARTIGO PRINCIPAL
+===================================================== */
+
+.featured{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    min-height:430px;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background:white;
+}
+
+.featured-image{
+    min-height:430px;
+    background:
+    linear-gradient(0deg,rgba(0,0,0,.65),rgba(0,0,0,.05)),
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85")
+    center/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+    padding:35px;
+    color:white;
+}
+
+.featured-image span{
+    background:var(--blue);
+    padding:7px 12px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.featured-content{
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.featured-content h3{
+    font-size:34px;
+    line-height:1.15;
+    margin:12px 0;
+}
+
+.featured-content p{
+    color:var(--muted);
+    margin-bottom:25px;
+}
+
+/* =====================================================
+   CATEGORIAS
+===================================================== */
+
+.categories{
+    background:white;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category-card{
+    min-height:230px;
+    border-radius:22px;
+    overflow:hidden;
+    position:relative;
+    color:white;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 10px 25px rgba(7,26,51,.12);
+}
+
+.category-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,rgba(3,16,34,.9),rgba(3,16,34,.15));
+}
+
+.category-content{
+    position:absolute;
+    inset:auto 20px 20px 20px;
+    z-index:2;
+}
+
+.category-content .icon{
+    font-size:28px;
+}
+
+.category-content h3{
+    font-size:21px;
+    margin:4px 0;
+}
+
+.category-content p{
+    font-size:12px;
+    color:#dce8f5;
+}
+
+/* =====================================================
+   ARTIGOS
+===================================================== */
+
+.articles{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.article-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    box-shadow:0 8px 25px rgba(7,26,51,.07);
+    transition:.3s;
+}
+
+.article-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.article-image{
+    height:205px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+.article-category{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:white;
+    color:var(--blue);
+    padding:6px 10px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.article-body{
+    padding:22px;
+}
+
+.article-body h3{
+    font-size:20px;
+    line-height:1.25;
+    margin-bottom:10px;
+}
+
+.article-body p{
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:17px;
+}
+
+.read{
+    color:var(--blue);
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* =====================================================
+   BLOCO NEWSLETTER
+===================================================== */
+
+.newsletter{
+    background:
+    linear-gradient(120deg,rgba(7,26,51,.97),rgba(15,78,135,.92)),
+    url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+    color:white;
+}
+
+.newsletter-box{
+    max-width:780px;
+    margin:auto;
+    text-align:center;
+}
+
+.newsletter h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.newsletter p{
+    color:#d7e5f4;
+    margin-bottom:25px;
+}
+
+.newsletter-form{
+    display:flex;
+    max-width:600px;
+    margin:auto;
+    gap:10px;
+}
+
+.newsletter-form input{
+    flex:1;
+    padding:16px;
+    border-radius:10px;
+    border:0;
+    outline:none;
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:450px;
+    border-radius:28px;
+    background:
+    linear-gradient(0deg,rgba(7,26,51,.65),rgba(7,26,51,.05)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.about-content .mini{
+    color:var(--blue);
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.about-content h2{
+    font-size:40px;
+    line-height:1.1;
+    margin:10px 0 18px;
+}
+
+.about-content p{
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.check-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.check-list li{
+    margin:10px 0;
+    font-weight:bold;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:var(--blue);
+    margin-right:10px;
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    padding:70px 0;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#1479d1,#0a4f91);
+    color:white;
+    border-radius:28px;
+    padding:45px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta-box h2{
+    font-size:32px;
+    line-height:1.15;
+    margin-bottom:10px;
+}
+
+.cta-box p{
+    color:#dceeff;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#041225;
+    color:white;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-brand p{
+    color:#aebfd2;
+    margin-top:15px;
+    max-width:330px;
+}
+
+footer h4{
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:9px 0;
+}
+
+footer a{
+    color:#aebfd2;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#7e92a8;
+    font-size:13px;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:74px;
+        left:0;
+        right:0;
+        background:var(--dark);
+        display:none;
+        flex-direction:column;
+        padding:25px;
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .highlight-grid,
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .articles{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .featured,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-image{
+        min-height:350px;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        min-height:68px;
+    }
+
+    .nav-links{
+        top:68px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .hero{
+        min-height:610px;
+    }
+
+    .hero-content{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:46px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .highlight-grid,
+    .category-grid,
+    .articles{
+        grid-template-columns:1fr;
+    }
+
+    .featured-content{
+        padding:30px;
+    }
+
+    .featured-content h3{
+        font-size:28px;
+    }
+
+    .section-heading h2{
+        font-size:30px;
+    }
+
+    .newsletter-form{
+        flex-direction:column;
+    }
+
+    .about-image{
+        min-height:330px;
+    }
+
+    .about-content h2{
+        font-size:32px;
+    }
+
+    .cta-box{
+        padding:30px;
+    }
+
+    .cta-box h2{
+        font-size:27px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#inicio" class="logo">
+    VIVA <span>DIGITAL</span>
+    <small>APRENDA. ENCONTRE. CRESÇA.</small>
+</a>
+
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">
+    ☰
+</button>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#inicio">Início</a>
+<a href="#categorias">Categorias</a>
+<a href="#artigos">Artigos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero" id="inicio">
+
+<div class="container">
+
+<div class="hero-content">
+
+<span class="tag">🌍 Conteúdo em português</span>
+
+<h1>
+Aprenda.<br>
+<span>Encontre.</span><br>
+Cresça.
+</h1>
+
+<p>
+Informação prática sobre dinheiro, trabalho online,
+inteligência artificial, tecnologia, emprego,
+aprendizagem e negócios digitais.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#artigos" class="btn btn-primary">
+    Explorar conteúdos
+</a>
+
+<a href="#categorias" class="btn btn-outline">
+    Ver categorias
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     DESTAQUES
+===================================================== -->
+
+<section class="highlights">
+
+<div class="container">
+
+<div class="highlight-grid">
+
+<div class="highlight">
+
+<div class="highlight-icon">💰</div>
+
+<h3>Oportunidades</h3>
+
+<p>
+Descubra formas de usar a Internet
+para aprender, trabalhar e criar novas oportunidades.
+</p>
+
+</div>
+
+
+<div class="highlight">
+
+<div class="highlight-icon">🤖</div>
+
+<h3>Inteligência Artificial</h3>
+
+<p>
+Ferramentas e estratégias de IA explicadas
+de forma simples e prática.
+</p>
+
+</div>
+
+
+<div class="highlight">
+
+<div class="highlight-icon">💻</div>
+
+<h3>Vida Digital</h3>
+
+<p>
+Tecnologia, trabalho remoto, ferramentas,
+emprego e negócios digitais.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTIGO DESTAQUE
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="mini">Comece por aqui</span>
+
+<h2>Conteúdo para transformar conhecimento em ação</h2>
+
+<p>
+Não queremos apenas informar.
+Queremos ajudar-te a fazer alguma coisa com aquilo que aprendes.
+</p>
+
+</div>
+
+
+<div class="featured">
+
+<div class="featured-image">
+
+<div>
+<span>TRABALHO ONLINE</span>
+</div>
+
+</div>
+
+
+<div class="featured-content">
+
+<span class="mini">Artigo em destaque</span>
+
+<h3>
+Como começar a trabalhar online mesmo sem experiência
+</h3>
+
+<p>
+Descobre caminhos, ferramentas e estratégias que podem
+ajudar-te a dar os primeiros passos no mundo digital.
+</p>
+
+<a href="#artigos" class="btn btn-primary">
+Ler conteúdo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIAS
+===================================================== -->
+
+<section class="categories" id="categorias">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="mini">Explore</span>
+
+<h2>Encontre o que procuras</h2>
+
+<p>
+Conteúdos organizados para facilitar a tua aprendizagem.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<a href="#dinheiro" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">💰</div>
+
+<h3>Dinheiro & Renda Extra</h3>
+
+<p>Oportunidades, plataformas e estratégias.</p>
+
+</div>
+
+</a>
+
+
+<a href="#trabalho" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">💻</div>
+
+<h3>Trabalho Online</h3>
+
+<p>Freelance, remoto e profissões digitais.</p>
+
+</div>
+
+</a>
+
+
+<a href="#ia" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">🤖</div>
+
+<h3>IA & Tecnologia</h3>
+
+<p>Ferramentas e aplicações de inteligência artificial.</p>
+
+</div>
+
+</a>
+
+
+<a href="#ferramentas" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">📱</div>
+
+<h3>Ferramentas</h3>
+
+<p>Aplicativos, sites e recursos úteis.</p>
+
+</div>
+
+</a>
+
+
+<a href="#aprender" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">🎓</div>
+
+<h3>Aprender</h3>
+
+<p>Cursos, competências e aprendizagem.</p>
+
+</div>
+
+</a>
+
+
+<a href="#emprego" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">📄</div>
+
+<h3>Emprego & CV</h3>
+
+<p>Currículos, entrevistas e carreira.</p>
+
+</div>
+
+</a>
+
+
+<a href="#negocios" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">🌐</div>
+
+<h3>Negócios Digitais</h3>
+
+<p>Sites, marketing e empreendedorismo.</p>
+
+</div>
+
+</a>
+
+
+<a href="#guias" class="category-card"
+style="background-image:url('https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=85');">
+
+<div class="category-content">
+
+<div class="icon">🧠</div>
+
+<h3>Guias & Tutoriais</h3>
+
+<p>Passo a passo para resolver problemas reais.</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTIGOS
+===================================================== -->
+
+<section id="artigos">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="mini">Primeiros conteúdos</span>
+
+<h2>Comece a explorar</h2>
+
+<p>
+Alguns dos temas que vão formar a nossa biblioteca digital.
+</p>
+
+</div>
+
+
+<div class="articles">
+
+
+<article class="article-card" id="dinheiro">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">DINHEIRO</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+7 formas legítimas de ganhar dinheiro online em 2026
+</h3>
+
+<p>
+Conhece diferentes modelos de rendimento online
+e o que precisas para começar.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="trabalho">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1521898284481-a5ec348cb555?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">TRABALHO</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como começar a trabalhar online sem experiência
+</h3>
+
+<p>
+Um guia para quem está a dar os primeiros passos
+no mercado digital.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="ia">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">IA</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+10 ferramentas de IA que podem facilitar o teu trabalho
+</h3>
+
+<p>
+Conhece ferramentas que podem ajudar na produtividade,
+criação e aprendizagem.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="ferramentas">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">FERRAMENTAS</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Aplicativos e sites gratuitos que vale a pena conhecer
+</h3>
+
+<p>
+Uma seleção de ferramentas úteis para estudar,
+trabalhar e criar.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="aprender">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">APRENDER</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como aprender uma nova competência pela Internet
+</h3>
+
+<p>
+Estratégias simples para transformar a Internet
+num espaço de aprendizagem.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="emprego">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">EMPREGO</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como criar um CV profissional pelo telemóvel
+</h3>
+
+<p>
+Aprende os elementos que não podem faltar
+num currículo moderno.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="negocios">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">NEGÓCIOS</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como criar uma presença digital para o teu negócio
+</h3>
+
+<p>
+Descobre como começar a construir uma presença
+profissional na Internet.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card" id="guias">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">GUIAS</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como criar um site grátis passo a passo
+</h3>
+
+<p>
+Um guia para quem quer colocar o primeiro projeto
+na Internet.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+
+<article class="article-card">
+
+<div class="article-image"
+style="background-image:url('https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=85');">
+
+<span class="article-category">DIGITAL</span>
+
+</div>
+
+<div class="article-body">
+
+<h3>
+Como usar a Internet para criar novas oportunidades
+</h3>
+
+<p>
+Conhecimento, ferramentas e estratégias para entrar
+no mundo digital.
+</p>
+
+<a href="#" class="read">Ler artigo →</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+<div class="container">
+
+<div class="newsletter-box">
+
+<h2>
+Não percas os próximos conteúdos
+</h2>
+
+<p>
+Em breve poderás receber novidades, oportunidades,
+guias e ferramentas diretamente no teu email.
+</p>
+
+<form class="newsletter-form"
+onsubmit="return newsletterMessage(event)">
+
+<input
+type="email"
+id="email"
+placeholder="O teu melhor email"
+required
+>
+
+<button type="submit" class="btn btn-primary">
+Quero receber
+</button>
+
+</form>
+
+<p id="newsletter-result" style="margin-top:15px;"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE
+===================================================== -->
+
+<section class="about" id="sobre">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-content">
+
+<span class="mini">Sobre o VIVA DIGITAL</span>
+
+<h2>
+Aprender é bom.<br>
+Saber aplicar é melhor.
+</h2>
+
+<p>
+O VIVA DIGITAL nasceu para reunir informação prática
+e acessível para pessoas que querem aprender, trabalhar
+e crescer através da Internet e da tecnologia.
+</p>
+
+<p>
+Produzimos conteúdos pensados para quem fala português,
+independentemente do país onde vive.
+</p>
+
+<ul class="check-list">
+
+<li>Conteúdo prático</li>
+<li>Guias passo a passo</li>
+<li>Ferramentas digitais</li>
+<li>Oportunidades online</li>
+<li>Informação em português</li>
+
+</ul>
+
+<a href="#artigos" class="btn btn-primary">
+Explorar conteúdos
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contacto">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+Tens uma ideia, ferramenta ou oportunidade para partilhar?
+</h2>
+
+<p>
+Entra em contacto com a equipa VIVA DIGITAL.
+</p>
+
+</div>
+
+<a href="mailto:contacto@vivadigital.com"
+class="btn btn-primary">
+Contactar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo">
+VIVA <span>DIGITAL</span>
+<small>APRENDA. ENCONTRE. CRESÇA.</small>
+</div>
+
+<p>
+Informação prática para transformar conhecimento
+em oportunidades.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Explorar</h4>
+
+<ul>
+
+<li><a href="#dinheiro">Dinheiro</a></li>
+<li><a href="#trabalho">Trabalho Online</a></li>
+<li><a href="#ia">IA & Tecnologia</a></li>
+<li><a href="#ferramentas">Ferramentas</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Carreira</h4>
+
+<ul>
+
+<li><a href="#aprender">Aprender</a></li>
+<li><a href="#emprego">Emprego & CV</a></li>
+<li><a href="#negocios">Negócios Digitais</a></li>
+<li><a href="#guias">Guias</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Informações</h4>
+
+<ul>
+
+<li><a href="#sobre">Sobre nós</a></li>
+<li><a href="#contacto">Contacto</a></li>
+<li><a href="#">Privacidade</a></li>
+<li><a href="#">Termos de uso</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© <span id="year"></span> VIVA DIGITAL.
+Todos os direitos reservados.
+
+<br>
+
+Aprenda. Encontre. Cresça.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function toggleMenu(){
+
+    const menu = document.getElementById("navLinks");
+
+    menu.classList.toggle("active");
+
+}
+
+
+/* Fecha o menu depois de clicar */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("navLinks").classList.remove("active");
+
+    });
+
+});
+
+
+/* Ano automático */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* Newsletter */
+
+function newsletterMessage(event){
+
+    event.preventDefault();
+
+    const email =
+    document.getElementById("email").value;
+
+    const result =
+    document.getElementById("newsletter-result");
+
+    result.innerHTML =
+    "Obrigado! Em breve teremos novidades para ti. 📩";
+
+    document.getElementById("email").value = "";
+
+    return false;
+
+}
+
+</script>
+
+</body>
+</html>
