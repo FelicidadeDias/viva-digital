@@ -1,0 +1,10 @@
+{
+  "name": "fely-prospect-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pesquisa de empresas e leitura de websites públicos com Firecrawl",
+  "engines": { "node": ">=18" },
+  "scripts": { "dev": "vercel dev" },
+  "dependencies": {},
+  "devDependencies": { "vercel": "^39.0.0" }
+}
