@@ -1,32 +1,48 @@
 # FELY PROSPECT AI
 
-Aplicação de pesquisa de empresas, leitura de websites e recolha de informações empresariais publicamente acessíveis para a Fely e Amigos | Soluções Digitais.
+Aplicação da Fely e Amigos | Soluções Digitais para pesquisar empresas, analisar websites e preparar tarefas de prospeção comercial.
 
-## Funcionalidades
-- Pesquisa Web através da API Firecrawl.
-- Leitura de conteúdo de websites públicos.
-- Exibição de fontes para verificação.
-- Interface em português, adaptável a telemóveis.
-- Sem CRM, sem contas de utilizador e sem base de dados de clientes nesta fase.
+## O que a versão atual inclui
 
-## Requisito importante
-A chave Firecrawl é secreta e deve ficar apenas no servidor como variável de ambiente `FIRECRAWL_API_KEY`. Nunca a coloques no HTML nem num ficheiro público.
+- Interface responsiva em português para telemóvel e computador.
+- Formulário de pesquisa empresarial por país, cidade, setor e palavras-chave.
+- Área para analisar um website público.
+- **Assistente IA — preparação de pedidos:** cria um prompt comercial com regras de verificação de fontes, que pode ser copiado para esta conversa do ChatGPT ou para outro modelo.
+- Estrutura pensada para permitir, futuramente, fornecedores de IA diferentes (por exemplo, OpenAI, Google Gemini e outros), sem prender a interface a um único fornecedor.
+- Sem CRM, contas de utilizador ou base de dados de clientes nesta fase.
 
-## Executar localmente
-Requer Node.js 18 ou superior.
+## Importante: o que funciona sem outro servidor
 
-1. Instala dependências: `npm install`
-2. Define `FIRECRAWL_API_KEY` no ambiente do servidor.
-3. Instala a CLI da Vercel, se necessário, e inicia: `vercel dev`
-4. Abre o endereço local apresentado pela CLI.
+O GitHub Pages pode publicar a interface estática. A área **Assistente IA** prepara e copia pedidos; não é uma conversa automática incorporada nem chama um modelo diretamente.
 
-## Publicar
-Este repositório inclui uma função serverless compatível com Vercel em `api/search.js`. Importa o repositório na Vercel e adiciona `FIRECRAWL_API_KEY` em Project Settings → Environment Variables. Depois faz deploy.
+A pesquisa e a análise Firecrawl, no entanto, dependem de uma chamada segura à API. O GitHub Pages não executa funções de servidor. O ficheiro `api/search.js` é uma função Node/serverless e não funciona apenas por estar guardado no GitHub Pages.
 
-O GitHub Pages, sozinho, serve apenas ficheiros estáticos e não executa a função API. Para pesquisas reais, publica a aplicação num alojamento que execute a função serverless.
+**Não coloques uma chave da Firecrawl, OpenAI, Gemini ou de qualquer fornecedor no HTML/JavaScript público.** Uma chave no navegador pode ser extraída por qualquer visitante. Para ativar pesquisas Firecrawl automáticas e conversação com modelos dentro da aplicação, será necessário configurar um backend seguro ou uma integração autorizada que forneça essa capacidade.
 
-## Limites e privacidade
-- Os resultados dependem das fontes públicas encontradas, da disponibilidade dos websites e do plano/limites Firecrawl.
-- Confirma os dados e a origem antes de contactar uma empresa.
-- A aplicação não inventa contactos nem garante que todos os campos estejam disponíveis.
-- Respeita termos de uso, robots/restrições aplicáveis e leis locais; evita recolher dados pessoais não necessários.
+## Como publicar apenas a interface no GitHub Pages
+
+1. No repositório, abre **Settings → Pages**.
+2. Em *Build and deployment*, seleciona *Deploy from a branch*.
+3. Escolhe a branch `main` e a pasta `/ (root)), e guarda.
+4. Aguarda a publicação indicada pelo GitHub Pages.
+
+A interface estática e o gerador de pedidos do assistente poderão ser utilizados. As chamadas a `/api/search` continuarão indisponíveis no GitHub Pages até existir um backend.
+
+## Integração futura com vários modelos
+
+A integração deverá utilizar uma camada de servidor que:
+- mantenha as credenciais como variáveis de ambiente secretas;
+- escolha o fornecedor/modelo configurado;
+- valide entradas e limites de utilização;
+- devolva respostas ao frontend sem expor chaves;
+- permita desativar fornecedores não configurados.
+
+A seleção OpenAI/Gemini nesta fase é uma preferência usada na preparação do pedido, não uma ligação ativa a essas APIs. O acesso a modelos e a utilização do Firecrawl podem estar sujeitos a limites, créditos ou custos do fornecedor.
+
+## Privacidade e qualidade
+
+- Utiliza apenas informações empresariais publicamente acessíveis e relevantes.
+- Apresenta e verifica as fontes antes de utilizar os dados.
+- Não inventa contactos nem garante que todos os campos estejam disponíveis.
+- Não envia mensagens nem contacta empresas automaticamente.
+- Respeita os termos dos websites, as restrições aplicáveis e a legislação local.
